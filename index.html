@@ -27,11 +27,19 @@
         -webkit-transform: translate(0px, 0px);
                 transform: translate(0px, 0px);
       }
+      .avatar {
+        width: 50px;
+        position: absolute;
+        bottom: -15px;
+        left: -15px;
+        display: block;
+      }
     </style>
   </head>
   <body>
     <div id="map"></div>
     <div id="task001" class="card task draggable" style="width: 18rem;">
+      <img alt="" src="img/avatar2.png" class="avatar rounded-circle"/>
       <div class="card-body">
         <h5 class="card-title">Task 001 <span class="badge badge-primary float-right">In Progress</span></h5>
         <p class="card-text">Move to position.</p>
@@ -46,6 +54,7 @@
       </div>
     </div>
     <div id="task003" class="card task draggable" style="width: 18rem;">
+      <img alt="" src="img/avatar1.png" class="avatar rounded-circle"/>
       <div class="card-body">
         <h5 class="card-title">Task 003 <span class="badge badge-success float-right">Complete</span></h5>
         <p class="card-text">Board vessel. Gather intelligence.</p>
