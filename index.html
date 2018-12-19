@@ -3,20 +3,55 @@
   <head>
     <meta charset="UTF-8">
     <title>Thales Table</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./node_modules/leaflet/dist/leaflet.css">
     <style>
       body {
         padding: 0;
         margin: 0;
+        overflow: hidden;
       }
       html, body, #map {
         height: 100%;
-        width: 100;
+        width: 100%;
+        overflow: hidden;
+      }
+      .task {
+        width: 200px;
+        height: 150px;
+        position: absolute;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        user-select: none;
+        -webkit-transform: translate(0px, 0px);
+                transform: translate(0px, 0px);
       }
     </style>
   </head>
   <body>
     <div id="map"></div>
+    <div id="task001" class="card task draggable" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Task 001 <span class="badge badge-primary float-right">In Progress</span></h5>
+        <p class="card-text">Move to position.</p>
+        <a href="#" class="btn btn-danger float-right">Cancel Order</a>
+      </div>
+    </div>
+    <div id="task002" class="card task draggable" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Task 002 <span class="badge badge-success float-right">Complete</span></h5>
+        <p class="card-text">Patrol area.</p>
+        <a href="#" class="btn btn-secondary float-right">Dismiss</a>
+      </div>
+    </div>
+    <div id="task003" class="card task draggable" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Task 003 <span class="badge badge-success float-right">Complete</span></h5>
+        <p class="card-text">Board vessel. Gather intelligence.</p>
+        <a href="#" class="btn btn-secondary float-right">Dismiss</a>
+      </div>
+    </div>
     <script>
       // You can also require other files to run in this process
       require('./renderer.js')
